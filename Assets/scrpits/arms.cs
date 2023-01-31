@@ -37,6 +37,11 @@ public class arms : MonoBehaviour
         ResetUI();
     }
 
+    void FixedUpdate()
+    {
+        current -= Time.fixedDeltaTime;
+        current2 -= Time.fixedDeltaTime;
+    }
     
     void Update()
     {
@@ -53,8 +58,7 @@ public class arms : MonoBehaviour
         angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
         target.rotation = Quaternion.Euler(new Vector3(0, -angle + 90, 0));
 
-        current -= Time.fixedDeltaTime;
-        current2 -= Time.fixedDeltaTime;
+      
 
        
         if (Input.GetMouseButton(1))
