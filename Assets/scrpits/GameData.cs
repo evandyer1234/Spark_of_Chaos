@@ -69,5 +69,6 @@ public class GameData : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
+       
     }
 }
