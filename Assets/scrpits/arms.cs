@@ -88,7 +88,7 @@ public class arms : MonoBehaviour
                     if (gun2ammo <= 0)
                     {
                         gun2ammo = clipsize;
-                        gun2num = Random.Range(1, 3);
+                        gun2num = Random.Range(1, 4);
                         gun2vis.text = "" + gun2num;
                         combovis.text = "" + (gun1num + gun2num);
                     }
@@ -122,7 +122,7 @@ public class arms : MonoBehaviour
                     if (gun1ammo <= 0)
                     {
                         gun1ammo = clipsize;
-                        gun1num = Random.Range(1, 3);
+                        gun1num = Random.Range(1, 4);
                         gun1vis.text = "" + gun1num;
                         combovis.text = "" + (gun1num + gun2num);
                     }

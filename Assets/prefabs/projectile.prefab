@@ -357,6 +357,7 @@ MonoBehaviour:
   - {fileID: 7246222766691972176, guid: ef3931f8444971044baae2494316cd6c, type: 3}
   - {fileID: 8240461698004514293, guid: 580ccb45f071f1d41a7a8d0a81ff4acf, type: 3}
   - {fileID: 8692136350519820558, guid: a81b3042fd0f3d24b8c033f5a6d13455, type: 3}
+  - {fileID: 7006726225827174112, guid: 5ca2ce84de4e9ba4cb196feab47f02f4, type: 3}
   - {fileID: 237192016926517555, guid: 2a7c263e632d2be4ba441c89d4b48b37, type: 3}
 --- !u!135 &7169859686500337691
 SphereCollider:
