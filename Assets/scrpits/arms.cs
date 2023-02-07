@@ -27,6 +27,9 @@ public class arms : MonoBehaviour
 
     public Transform gun1pos, gun2pos;
     public Projectile projectile;
+
+    public AudioSource source;
+    public AudioClip clip;
     
     
     void Start()
@@ -84,13 +87,14 @@ public class arms : MonoBehaviour
 
                     gun2ammo--;
                     gun2visammo.text = "" + gun2ammo + "/" + clipsize;
-
+                    source.PlayOneShot(clip, 0.7f);
                     if (gun2ammo <= 0)
                     {
                         gun2ammo = clipsize;
                         gun2num = Random.Range(1, 4);
                         gun2vis.text = "" + gun2num;
                         combovis.text = "" + (gun1num + gun2num);
+                        
                     }
                 }
             }
@@ -118,13 +122,14 @@ public class arms : MonoBehaviour
 
                     gun1ammo--;
                     gun1visammo.text = "" + gun1ammo + "/" + clipsize;
-
+                    source.PlayOneShot(clip, 0.7f);
                     if (gun1ammo <= 0)
                     {
                         gun1ammo = clipsize;
                         gun1num = Random.Range(1, 4);
                         gun1vis.text = "" + gun1num;
                         combovis.text = "" + (gun1num + gun2num);
+                       
                     }
                 }
             }

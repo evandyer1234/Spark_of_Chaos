@@ -14,7 +14,16 @@ public class GameData : MonoBehaviour
     int currentwave = 1;
     public spawner sp;
     public TextMeshProUGUI WaveCounter;
+    public TextMeshProUGUI randtext;
     public float curve = 0.75f;
+
+    public Transform topleft, bottomright;
+    public gen g;
+
+    public List<string> nouns = new List<string>();
+
+    float cooldown = 3f;
+
 
     void Start()
     {
@@ -32,6 +41,7 @@ public class GameData : MonoBehaviour
 
     void FixedUpdate()
     {
+        cooldown -= Time.fixedDeltaTime;
         current -= Time.fixedDeltaTime;
         if (current <= 0)
         {
@@ -70,5 +80,27 @@ public class GameData : MonoBehaviour
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
        
+    }
+
+    public void acceleratetime(float boost)
+    {
+        current -= boost;
+    }
+
+    public void textrandomize()
+    {
+
+        randtext.text = "Every " + nouns[Random.Range(0, nouns.Count)] + " has been replaced with a/an " + nouns[Random.Range(0, nouns.Count)];
+    }
+
+    public void SpawnGen()
+    {
+        if (cooldown <= 0)
+        {
+            gen clone;
+            clone = Instantiate(g, new Vector3(Random.Range(topleft.position.x, bottomright.position.x), 0.7f, Random.Range(topleft.position.z, bottomright.position.z)), Quaternion.identity);
+            clone.gd = this;
+            cooldown = 3f;
+        }
     }
 }

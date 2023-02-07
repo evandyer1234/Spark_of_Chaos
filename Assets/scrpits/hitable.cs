@@ -33,7 +33,7 @@ public class hitable : MonoBehaviour
         }
     }
 
-    public void Die()
+    public virtual void Die()
     {
         Destroy(sliderparent.gameObject);
         Destroy(this.gameObject);

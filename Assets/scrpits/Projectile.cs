@@ -37,6 +37,7 @@ public class Projectile : MonoBehaviour
         {
             effect();
             h.TakeDamage(damage);
+            Destroy(this.gameObject);
         }
 
         Projectile p = other.GetComponent(typeof(Projectile)) as Projectile;
