@@ -30,7 +30,9 @@ public class arms : MonoBehaviour
 
     public AudioSource source;
     public AudioClip clip;
-    
+
+    [SerializeField] TextMeshProUGUI shotname;
+    [SerializeField] List<string> names = new List<string>();
     
     void Start()
     {
@@ -94,7 +96,7 @@ public class arms : MonoBehaviour
                         gun2num = Random.Range(1, 4);
                         gun2vis.text = "" + gun2num;
                         combovis.text = "" + (gun1num + gun2num);
-                        
+                        shotname.text = names[gun1num + gun2num];
                     }
                 }
             }
@@ -129,7 +131,7 @@ public class arms : MonoBehaviour
                         gun1num = Random.Range(1, 4);
                         gun1vis.text = "" + gun1num;
                         combovis.text = "" + (gun1num + gun2num);
-                       
+                        shotname.text = names[gun1num + gun2num];
                     }
                 }
             }

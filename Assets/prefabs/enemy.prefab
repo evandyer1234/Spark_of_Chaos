@@ -295,6 +295,7 @@ MonoBehaviour:
   health: 10
   slider: {fileID: 1409719481307085787}
   sliderparent: {fileID: 1409719482401787659}
+  points: 10
 --- !u!114 &1409719481932946091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ NavMeshAgent:
   m_AngularSpeed: 240
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
