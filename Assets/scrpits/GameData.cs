@@ -30,6 +30,7 @@ public class GameData : MonoBehaviour
     public float drate = 0.1f;
     [SerializeField] Slider comboslider;
     [SerializeField] float maxscoremult = 50f;
+    [SerializeField] TextMeshProUGUI cd;
 
     public List<string> nouns = new List<string>();
     public GameObject contentslider;
@@ -110,7 +111,7 @@ public class GameData : MonoBehaviour
             {
                 comborate = 1f;
             }
-
+            cd.text = "X" + (int)comborate;
             comboslider.value = comborate;
             Debug.Log(comborate);
         }
@@ -203,6 +204,7 @@ public class GameData : MonoBehaviour
         {
             comborate = maxscoremult;
         }
+        
     }
 
     public void NewScore()
